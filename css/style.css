@@ -974,7 +974,7 @@ opacity: .7;
   }
   .header__nav {
     position: absolute;
-    top: 86%;
+    top: 100%;
     left: 0;
     right: 0;
     flex-direction: column;
