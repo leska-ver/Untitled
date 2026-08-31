@@ -737,6 +737,9 @@ opacity: .7;
 /*** // hero-1796px // ***/
 
 /*** services-1796 ***/
+.services {
+  padding-bottom: 50px;
+}
 .services__container {
   padding: 0 84px;
 }
@@ -836,7 +839,7 @@ opacity: .7;
   }
 
   .services {
-    padding: 200px 0 0;
+    padding: 200px 0 50px;
   }
   .services__item {
     min-width: 660px; /* когда ширина становится меньше 300px — переносится */
@@ -1033,7 +1036,7 @@ opacity: .7;
   }
 
   .services {
-    padding: 0;
+    padding: 0 0 30px;
   }
   .services__list {
     gap: 14px;
