@@ -833,6 +833,16 @@ opacity: .7;
 }
 /*** // services-1796 // ***/
 
+/*** footer-1796 ***/
+.footer {
+  padding: 30px 0;
+  background: var(--color-botticelli);
+  text-align: center;
+  font-size: 14px;
+  color: var(--color-riverBed);
+}
+/*** // footer-1796 // ***/
+
 @media (max-width: 1780px) {
   [class*="container"] {
     padding: 0 50px;
