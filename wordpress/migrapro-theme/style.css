@@ -469,14 +469,14 @@ opacity: .7;
   opacity: .5;
 }
 .header__social {
-  margin: 13px 21px 0;
+  margin: 13px 18px 0;
 }
 .header__info {
   margin: 8px 15px 0 0;
   text-align: right;
 }
 .header__phone {
-  font-size: 18.7px;
+  font-size: 20.5px;
 }
 .header__schedule {
   margin: 0;
@@ -485,6 +485,7 @@ opacity: .7;
 }
 .header__phoneBtn {
   margin: 4px 25px 0 0;
+  font-size: 19.1px;
 }
 
 /* -- header__bottom -- */
@@ -511,7 +512,7 @@ opacity: .7;
 }
 .header__item:nth-child(2) {/*второй элемент*/
   margin-top: 2px;
-  margin-right: 19px;
+  margin-right: 28px;
 }
 .header__item:nth-child(3) {/*третий элемент*/
   margin-top: 2px;
@@ -519,7 +520,7 @@ opacity: .7;
 }
 .header__item:nth-child(4) {/*четвёртый элемент*/
   margin-top: 2px;
-  margin-right: 20px;
+  margin-right: 27px;
 }
 .header__item:nth-child(5) {/*пятый элемент*/
   margin-top: 2px;
@@ -728,8 +729,8 @@ opacity: .7;
 
 .header__arrowText {
   display: grid;
-  grid-template-columns: 85px 1fr;
-  margin-top: -2px;
+  grid-template-columns: 98px 1fr;
+  margin-top: -4px;
 }
 .header__stars {
   display: flex;
@@ -753,17 +754,31 @@ opacity: .7;
 .hero {
   position: relative;
 }
-.hero::after {
+/*ACF не видит ::after*/
+/*.hero::after {
   content: "";
   position: absolute;
   top: 55px;
   right: 64px;
   max-width: 44.66%;
   background: center / cover no-repeat;
-  background-image: url("./img/citizen.png");
-  min-height: 437px;
+  /*background-image: url("../img/citizen.png"); В page-home.php*/
+  /*min-height: 437px;
   width: 100%;
   z-index: -1;
+}*/
+.hero__image-ACF {
+    position: absolute;
+    top: 7px;
+    right: 64px;
+    max-width: 44.66%;
+    width: 100%;
+    z-index: -1;
+}
+.hero__image-ACF img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 .hero__container {
   display: flex;
@@ -775,8 +790,8 @@ opacity: .7;
   flex-basis: 1144px;
 }
 .hero__h2 {
-  margin-bottom: 27px;
-  font-size: clamp(39px, 5vw, 58px);
+  margin-bottom: 24px;
+  font-size: clamp(39px, 5vw, 59.5px);
   line-height: 1.11;
   color: var(--color-funBlue);
 }
@@ -854,6 +869,7 @@ opacity: .7;
   align-items: center;
   gap: 20px;
   padding-bottom: 20px;
+  font-size: 19.4px;
 }
 .services__link-666 {
   display: none;
@@ -924,10 +940,14 @@ opacity: .7;
     padding: 25px 0;
   }
 
-  .hero::after {
+  /* .hero::after {
     right: -45px;
     max-width: 750px;
-    background-size: contain;
+    background-size: contain; 
+  }*/
+  .hero__image-ACF {
+    right: -45px;
+    max-width: 750px;
   }
   .hero__content {
     padding-left: 0;
@@ -968,7 +988,11 @@ opacity: .7;
     padding: 0 28px 12px 12px;
   }
 
-  .hero::after {
+  /* .hero::after {
+    right: 0;
+    max-width: 550px;
+  } */
+  .hero__image-ACF {
     right: 0;
     max-width: 550px;
   }
@@ -1087,10 +1111,14 @@ opacity: .7;
   .hero {
     padding-top: 217px;
   }
-  .hero::after {
+  /*.hero::after {
     top: 22px;
     min-height: 232px;
-    background-image: url("<?php echo get_template_directory_uri(); ?>/img/citizen-mobile.png") center / cover no-repeat;
+    background: url("../img/citizen-mobile.png") center / cover no-repeat; в page-home.php
+  }*/
+  .hero__image-ACF {
+    top: 22px;
+    min-height: 232px;
   }
   .hero__container {
     display: block;

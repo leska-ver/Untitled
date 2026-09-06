@@ -1,12 +1,21 @@
-<section class="hero">
-    <div class="hero__container">
-      <div class="hero__content">
-        <h2 class="hero__h2 h2">Миграционные услуги 
-          <span>в Москве и Московской области</span></h2>
-        <p class="hero__desc desc">РВП, ВНЖ, гранжданство РФ: собираем полный пакет документов и ведём дело до результата. Компаниями — легальное оформление иностранных сотрудников.</p>
+  <!--Для hero__image -->
 
-      </div>
-    </div>
+  <section class="hero">
+    <div class="hero__container">
+        <div class="hero__content">
+            <h2 class="hero__h2 h2">Миграционные услуги 
+                <span>в Москве и Московской области</span>
+            </h2>
+            <p class="hero__desc desc">РВП, ВНЖ, гранжданство РФ: собираем полный пакет документов и ведём дело до результата. Компаниями — легальное оформление иностранных сотрудников.</p>
+        </div>
+        <div class="hero__image-ACF">
+            <?php 
+            $hero_image = get_field('hero_image');
+            if ($hero_image) : ?>
+                <img src="<?php echo esc_url($hero_image['url']); ?>" alt="<?php echo esc_attr($hero_image['alt']); ?>">
+            <?php endif; ?>
+        </div>
+    </div>    
   </section>
   <section class="services">
     <div class="services__container">

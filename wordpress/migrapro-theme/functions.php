@@ -88,4 +88,5 @@ function migrapro_submenu_item_classes($classes, $item) {
     }
     return $classes;
 }
+
 ?>

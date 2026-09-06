@@ -80,4 +80,16 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+
+    // ======== вырезаем &nbsp; только из текста ========
+document.addEventListener('DOMContentLoaded', function() {
+    // Находим все элементы, которые могут содержать текст
+    var elements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, a, li, div');
+    elements.forEach(function(el) {
+        if (el.childNodes.length > 0) {
+            el.innerHTML = el.innerHTML.replace(/&nbsp;/g, ' ');
+        }
+    });
+});
 });
