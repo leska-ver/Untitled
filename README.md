@@ -74,7 +74,7 @@
 - Все остальные CSS-файлы (`normalize.css`, `доп.стили`) можно класть в папку `css/` и подключать через `functions.php`.
 
 ## В wordpress заменил класс .header__dropdown на свой sub-menu
----
+```css
 /* -- В wordpress заменил классы на свои -- */
 .sub-menu {/*.header__dropdown*/
     position: absolute;
@@ -119,4 +119,15 @@
     background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.8995 9.40078L10.8995 0.999993L2.37751 1.00011M10.8995 0.999993L1.00001 10.8995' stroke='gray' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 /* -- // В wordpress заменил классы на свои -- */
----
+```
+
+### Классы подменю (functions.php)
+
+```php
+// ====== ДОБАВЛЯЕМ СВОЙ КЛАСС К ПОДМЕНЮ ======
+add_filter( 'nav_menu_submenu_css_class', 'migrapro_submenu_classes', 10, 3 );
+function migrapro_submenu_classes( $classes, $args, $depth ) {
+    $classes[] = 'header__dropdown_js';
+    return $classes;
+}
+```
