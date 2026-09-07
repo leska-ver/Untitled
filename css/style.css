@@ -83,6 +83,7 @@
   --color-dodgerBlue: #50b3ff;
   --color-shark: #1a1b1d;
   --color-stTropaz: #265F91;
+  --color-solitude: #e3f1ff;
 }
 
 html {
@@ -728,7 +729,7 @@ opacity: .7;
   color: var(--color-funBlue);
 }
 .hero__h2 span {
-  white-space: nowrap;
+  white-space: nowrap;/* Цифра и текст не разделятся */
 }
 .hero__desc {
   width: 74%;
@@ -833,6 +834,45 @@ opacity: .7;
   white-space: nowrap;
 }
 /*** // services-1796 // ***/
+
+/*** advantages-1796 ***/
+.advantages {
+  padding: 50px 0;
+}
+.advantages__container {
+}
+.advantages__title {
+}
+.advantages__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 auto;
+  border-radius: 20px;
+  border: 1px solid var(--color-botticelli);
+  width: 70%;
+}
+.advantages__item {
+  display: flex;
+}
+.advantages__icon {
+  padding: 10px;
+  border-radius: 12px;
+  width: max-content;
+  height: max-content;
+  background-color: var(--color-solitude);
+}
+.advantages__card {
+  padding: 0 20px;
+  border-right: 1px solid var(--color-botticelli);
+}
+.advantages__h3 {
+}
+.advantages__desc {
+}
+.advantages__desc span {
+  white-space: nowrap;/* Цифра и текст не разделятся */
+}
+/*** // advantages-1796 // ***/
 
 /*** footer-1796 ***/
 .footer {
