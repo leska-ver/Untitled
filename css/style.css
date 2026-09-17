@@ -740,7 +740,7 @@ opacity: .7;
 
 /*** services-1796 ***/
 .services {
-  padding-bottom: 50px;
+  padding-bottom: 64px;
 }
 .services__container {
   padding: 0 84px;
@@ -837,7 +837,7 @@ opacity: .7;
 
 /*** advantages-1796 ***/
 .advantages {
-  padding: 50px 0;
+  padding: 64px 0;
 }
 .advantages__container {
 }
@@ -845,32 +845,47 @@ opacity: .7;
 }
 .advantages__list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 26.3% 20.7% 26.05% 22%;
   margin: 0 auto;
   border-radius: 20px;
   border: 1px solid var(--color-botticelli);
-  width: 70%;
+  width: 1134px;
 }
 .advantages__item {
   display: flex;
+  padding: 19px 0 19px 19px;
+}
+.advantages__item:not(:last-child) .advantages__card {/*кроме последнего*/
+  border-right: 1px solid var(--color-botticelli);
 }
 .advantages__icon {
   padding: 10px;
   border-radius: 12px;
-  width: max-content;
-  height: max-content;
+  flex-shrink: 0; /* Запрещает иконке уменьшаться и деформироваться */  
+  /* Ваши текущие стили (например, width, height) */
+  width: 44px;   
+  height: 44px;
   background-color: var(--color-solitude);
 }
 .advantages__card {
-  padding: 0 20px;
-  border-right: 1px solid var(--color-botticelli);
+  padding: 0 0 0 20px;
 }
 .advantages__h3 {
+  margin: 6px 0 20px;
+  font-size: clamp(25px, 5vw, 30px);  
 }
 .advantages__desc {
+  margin-bottom: 0;
+  line-height: 26px;
 }
 .advantages__desc span {
   white-space: nowrap;/* Цифра и текст не разделятся */
+}
+.advantages__desc_line-21 {
+  line-height: 21px;
+}
+.advantages__desc_line-18 {
+  line-height: 18px;
 }
 /*** // advantages-1796 // ***/
 
@@ -926,12 +941,48 @@ opacity: .7;
     max-width: 100%;
     box-sizing: border-box; /* чтобы паддинги не вылезали */
   }
+
+  .advantages__list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+  }
+  .advantages__item {
+    padding: 15px;
+  }
+  .advantages__item:not(:last-child) {
+    border-right: 1px solid var(--color-botticelli);
+    border-bottom: 1px solid var(--color-botticelli);
+  }
+  .advantages__item:not(:last-child) .advantages__card {
+    border-right: none;
+  }
+  .advantages__card {
+    padding: 0 20px;
+  }
+  .advantages__desc {
+    line-height: 26px;
+  }
+  .advantages__desc span {
+    white-space: normal;
+  }
 }
 
 @media (max-width: 1111px) {
   .header__arrowText {
     display: none;
   }
+
+  .advantages {
+    padding: 10px 0;
+  }
+  .advantages__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .advantages__item:not(:last-child) {
+    border-right: none;
+  }
+
 }
 
 @media (max-width: 888px) {
@@ -1087,19 +1138,22 @@ opacity: .7;
   }
 
   .services {
-    padding: 0 0 30px;
+    padding: 0 0 11px;
   }
   .services__list {
     gap: 14px;
+        gap: 18px;
   }
   .services__item {
     min-width: 100%;
   }  
   .services__card {
     padding: 3px 22px 20px 33px;
+        padding: 2px 31px 20px 33px;
   }
   .services__h3 {
-    margin-bottom: 16px;
+    margin-bottom: 17px;
+        margin-bottom: 18px;
   }
   .services__h4 {
     margin: 0;
@@ -1113,14 +1167,21 @@ opacity: .7;
     line-height: 24px;
     letter-spacing: -1px;
   }
+  .services__links {
+        gap: 16px;
+  }
   .services__link {
     padding-bottom: 17px;
     padding-right: 12px;
     border-radius: 8px;
     width: 100%;
+          padding: 15px 12px 17px 25px;
+          font-size: 16.5px;
   }
   .services__link-transparent666 {
     gap: 15px;
+        margin-left: -6.9px;
+        margin-bottom: 3px;
     padding: 16px 0 0px;
     width: max-content;
     font-size: 17px;
@@ -1149,6 +1210,7 @@ opacity: .7;
   }
   .services__info {
     gap: 19px;
+        gap: 24px;
   } 
   .services__offices h3 {
     font-size: 14.3px;
@@ -1159,11 +1221,49 @@ opacity: .7;
     font-size: 14px;
     line-height: 21px;
   }
+
+  .advantages__item {
+    padding: 17px 12px 10px;
+  }
+  .advantages__card {
+    padding: 0 20px 0 15px;
+  }
+  .advantages__h3 {
+    margin: 3px 0 5px;
+  }
+  .advantages__desc {
+    margin: 0;
+    font-size: 13px;
+    line-height: 18px;
+  }
+  .advantages__desc_line-18 {
+    line-height: 22px;
+  }
 }
 
 @media (max-width: 400px) {
   .services__offices {
     padding: 17px 20px 7px 20px;
     text-align: start;
+  }
+
+  .advantages__item {
+    padding: 17px 2px 5px 12px;
+  }
+  .advantages__item--pt-13 {
+    padding-top: 13px;
+  }
+  .advantages__item--pt-27 {
+    padding-top: 27px;
+  }
+  .advantages__item--pt-27 .advantages__h3 {
+    margin-bottom: 10px;
+  }
+  .advantages__card {
+    padding: 0 8px 0 15px;
+  }
+  .advantages__desc_line-22 {
+    margin: 11px 0 7px;
+    line-height: 20px;
   }
 }
