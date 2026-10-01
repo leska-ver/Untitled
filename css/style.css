@@ -126,8 +126,8 @@ body {
 }
 
 img {
-  height: auto;
   max-width: 100%;
+  height: auto;
   -o-object-fit: cover;
   object-fit: cover;
 }
@@ -344,12 +344,12 @@ button {
   background: linear-gradient(0deg, var(--color-monza) 3%, var(--color-monza) 5%, var(--color-monza) 100%);
 }
 .burger:hover {
-  color: var(--color-white);
   background: -moz-linear-gradient(0deg, #7a7676 1.25%, #170655 1.25%, var(--color-funBlue) 100%);
   background: -webkit-linear-gradient(0deg, #7a7676 1.25%, #170655 1.25%, var(--color-funBlue) 100%);
   background: -ms-linear-gradient(0deg, #7a7676 1.25%, #170655 1.25%, var(--color-funBlue) 100%);
   background: -o-linear-gradient(0deg, #7a7676 1.25%, #170655 1.25%, var(--color-funBlue) 100%);
   background: linear-gradient(0deg, #7a7676 1.25%, #170655 1.25%, var(--color-funBlue) 100%);
+  color: var(--color-white);
 }
 .burger:active {
 opacity: .7;
@@ -358,11 +358,11 @@ opacity: .7;
   display: block;
   position: absolute;
   left: 21%;
-  height: 3px;
-  width: 63%;
-  background: var(--color-white);
-  border: 1px solid transparent;
   border-radius: 8px;
+  border: 1px solid transparent;
+  width: 63%;
+  height: 3px;
+  background: var(--color-white);
   opacity: 1;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -384,37 +384,37 @@ opacity: .7;
   top: 24px;
 }
 .burger span {
-  background: var(--color-white);
-  /*left: auto; Зеркалить поворот*/
   right: 0;
+  /*left: auto; Зеркалить поворот*/
+  background: var(--color-white);
   transition: all .4s ease-in-out;
 }
 /*Крест*/
 .burger.open span:nth-child(1) {
+  top: 50%;
+  left: 50%;
+  margin-top: -2px;
+  margin-left: -35%;
+  width: 70%;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
-  top: 50%;
-  left: 50%;
-  width: 70%;
-  margin-top: -2px;
-  margin-left: -35%;
 }
 .burger.open span:nth-child(2) {
   width: 0%;
   opacity: 0;
 }
 .burger.open span:nth-child(3) {
+  top: 50%;
+  left: 50%;
+  margin-top: -2px;
+  margin-left: -35%;
+  width: 70%;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  top: 50%;
-  left: 50%;
-  width: 70%;
-  margin-top: -2px;
-  margin-left: -35%;
 }
 
 /* В шапке соц.сети */
@@ -530,11 +530,11 @@ opacity: .7;
   display: flex;
   align-items: center;
   padding: 0;
-  outline: none;
   border: 1px solid transparent;  
   width: 75px; /* чтобы кнопка не прыгала при изменении иконки */
   background-color: transparent;
   cursor: pointer; 
+  outline: none;
   -webkit-transition: color .4s ease-in-out;
   -moz-transition: color .4s ease-in-out;
   -ms-transition: color .4s ease-in-out;
@@ -711,10 +711,10 @@ opacity: .7;
   top: 55px;
   right: 64px;
   max-width: 44.66%;
-  background: center / cover no-repeat;
-  background-image: url("../img/citizen.png");
   min-height: 437px;
   width: 100%;
+  background: center / cover no-repeat;
+  background-image: url("../img/citizen.png");
   z-index: -1;
 }
 .hero__container {
@@ -773,8 +773,8 @@ opacity: .7;
 .services__card {
   display: flex;
   flex-direction: column; /* всё в столбик */
-  border-radius: 40px;
   padding: 3px 38px 19px;
+  border-radius: 40px;
   height: 100%; /* растягиваем карточку на всю высоту */
   background: var(--color-botticelli);
 }
@@ -815,14 +815,14 @@ opacity: .7;
   padding: 17px 20px 15px 20px;
   border-radius: 20px;
   border: 1px solid var(--color-stTropaz);
+  flex: 1 1 250px; /* занимает место, но не меньше 250px */
+  min-width: 250px;
+  max-width: 400px; /* не раздувается */
   font-weight: 500;
   font-size: 18px;
   line-height: 26px;
   color: var(--color-shark);
   text-transform: uppercase;
-  flex: 1 1 250px; /* занимает место, но не меньше 250px */
-  min-width: 250px;
-  max-width: 400px; /* не раздувается */
 }
 .services__offices h3 {
   margin: 0;
@@ -909,9 +909,6 @@ opacity: .7;
   gap: 20px;
   margin: 0 0 30px 0;
 }
-.options__item {
-  flex: 1 1 calc(50% - 20px);
-}
 .options__card {
   display: flex;
   flex-direction: column;
@@ -939,11 +936,11 @@ opacity: .7;
   letter-spacing: .37px;
 }
 .options__text span {
-    white-space: nowrap;
+  white-space: nowrap;/* текст не разделятся */
 }
 .options__text span.nowrap-666 {
   display: none;
-  white-space: nowrap;
+  white-space: nowrap;/* текст не разделятся */
 }
 .options__link {
   display: flex;
@@ -955,50 +952,143 @@ opacity: .7;
 }
 /*** // options-1796 // ***/
 
-/*** priceList-1796***/
-.priceList {
+/*** priceInfo-1796***/
+.priceInfo {
   position: relative;
   padding: 38px 0 76px;
 }
-.priceList::after {
-    content: "";
-    position: absolute;
-    top: 53px;
-    right: 180px;
-    max-width: 38.25%;
-    background: center / cover no-repeat;
-    background-image: url("../img/pic.png");
-    min-height: 276px;
-    width: 100%;
-    z-index: -1;
+.priceInfo::after {
+  content: "";
+  position: absolute;
+  top: 53px;
+  right: 180px;
+  max-width: 38.25%;
+  width: 100%;
+  min-height: 276px;
+  background: center / cover no-repeat;
+  background-image: url("../img/pic.png");
+  z-index: -1;
 }
-.priceList__container {
+.priceInfo__container {
   display: flex;
   justify-content: space-between;
   gap: 30px;
 }
-.priceList__content {
+.priceInfo__content {
   padding-left: 5px;  
   flex-basis: 525px;
 }
-.priceList__h2 {
+.priceInfo__h2 {
   margin-bottom: 19px;
   font-size: clamp(38px, 5vw, 41.33px);
   line-height: 1.2;
   color: var(--color-funBlue);
 }
-.priceList__desc {
+.priceInfo__desc {
   line-height: 25px;
   letter-spacing: .37px;
+}
+/*** // priceInfo-1796 // ***/
+
+/*** priceList-1796 ***/
+.priceList {
+  padding: 0 0 40px;
+}
+.priceList__container {
+  padding: 0 76px 0 82px;
+}
+.priceList__list {
+  display: grid;
+  grid-template-columns: 31.5% 31.5% 31.5%;
+  gap: 41px;
+  margin: 0 0 25px 0;
+}
+.priceList__card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  padding: 21px 40px 43px;
+  height: 100%;
+  color: var(--color-shark1D);
+  background: var(--color-botticelli);
+}
+.priceList__h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 17px;
+  font-size: 22px;
+}
+.priceList__text {
+  margin: 0 0 25px;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: .37px;
+}
+.priceList__text .span-1796 {
+  white-space: nowrap;/* текст не разделятся */
+}
+.priceList__space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+.priceList__span {
+  margin-top: 3px;
+  font-size: 23px;
+}
+.priceList__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: auto;
+  padding: 16px 20px 16px 16.7px;
+  border-radius: 8px;
+  max-width: 280px;
+  font-size: 18px;
+  word-break: break-all; /*Жесткий перенос. Не удалять!*/
+}
+.priceList__flex {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.priceList__all {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 141px;
+  font-size: 18.5px;
+  color: var(--color-funBlue);
+}
+.priceList__all:focus {
+  color: var(--color-black);
+}
+.priceList__all svg path {
+  stroke: var(--color-funBlue);
+}
+.priceList__all:focus svg path {
+  stroke: var(--color-black);
+}
+.priceList__all:hover svg path {
+  stroke: var(--color-monza);
+}
+.priceList__desc {
+  margin: 0;
+  font-size: 18.65px;
+  line-height: 20px;
 }
 /*** // priceList-1796 // ***/
 
 /*** footer-1796 ***/
 .footer {
   padding: 30px 0;
-  background: var(--color-botticelli);
   text-align: center;
   font-size: 14px;
+  background: var(--color-botticelli);
   color: var(--color-riverBed);
 }
 /*** // footer-1796 // ***/
@@ -1027,7 +1117,7 @@ opacity: .7;
     white-space: normal;
   }
 
-  .priceList::after {
+  .priceInfo::after {
     right: 50px;
     background-size: contain;
   }
@@ -1086,10 +1176,23 @@ opacity: .7;
     grid-template-columns: 33% 33% 33%;
   }
 
-  .priceList::after {
+  .priceInfo::after {
     right: -45px;
     max-width: 750px;
     background-size: contain;
+  }
+
+  .priceList__card {
+    padding: 7px 25px 30px;
+  }
+  .priceList__space-between {
+    flex-direction: column;
+    align-items: start;
+    gap: 16px;
+  }
+  .priceList__link {
+    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -1129,6 +1232,14 @@ opacity: .7;
     padding: 7px 25px 30px;
   }
 
+  .priceList__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .priceList__item {
+    flex: 1 1 calc(100% - 20px);
+  }
+
 }
 
 @media (max-width: 888px) {
@@ -1157,9 +1268,15 @@ opacity: .7;
     max-width: 550px;
   }
 
-  .priceList::after {
+  .priceInfo::after {
     right: 0;
     max-width: 550px;
+  }
+
+  .priceList__flex {
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
   }
 }
 
@@ -1183,8 +1300,8 @@ opacity: .7;
   }
   .header__container {
     padding: 16px 0 0;
-    border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
     background-color: var(--color-botticelli);
   }
   .header__box-shadow {
@@ -1228,8 +1345,8 @@ opacity: .7;
   .header__nav {
     position: absolute;
     top: 100%;
-    left: 0;
     right: 0;
+    left: 0;
     flex-direction: column;
     padding: 20px;
     width: 100%;
@@ -1244,8 +1361,8 @@ opacity: .7;
   }
   .header__dropdown {
     top: 28px;
-    left: auto;
     right: 0;
+    left: auto;
     padding: 16px 0;
     width: 100%;
     max-width: 444px; /* чтобы на больших мобилках не расползался */
@@ -1276,8 +1393,8 @@ opacity: .7;
     display: block;
   }
   .hero__h2 {
-    line-height: 40px;
     margin-bottom: 19px;
+    line-height: 40px;
   }
   .hero__h2 span {
     white-space: normal;
@@ -1326,8 +1443,8 @@ opacity: .7;
   }
   .services__link-transparent666 {
     gap: 15px;
-    margin-left: -6.9px;
     margin-bottom: 3px;
+    margin-left: -6.9px;
     padding: 16px 0 0px;
     width: max-content;
     font-size: 17px;
@@ -1421,20 +1538,17 @@ opacity: .7;
     margin-left: 10px;
   }
 
-  .priceList {
+  .priceInfo {
     margin-top: -25px;
-    padding-top: 171px;
+    padding-top: 50%;
   }
-  .priceList::after {
+  .priceInfo::after {
     top: 0;
-    max-width: 359px;
-    min-height: 171px;
-    background: url("../img/pic-mobile.png") center / cover no-repeat;
   }
-  .priceList__container {
+  .priceInfo__container {
     padding: 0 11px;
   }
-  .priceList__h2 {
+  .priceInfo__h2 {
     margin-top: 26px;
     font-size: 39px;
     line-height: 1.03;
@@ -1465,5 +1579,61 @@ opacity: .7;
   .advantages__desc_line-22 {
     margin: 11px 0 7px;
     line-height: 20px;
+  }
+
+  .priceInfo {
+    padding: 171px 0 0;
+  }
+  .priceInfo::after {
+    max-width: 100%;
+    min-height: 171px;
+    background: url("../img/pic-mobile.png") center / cover no-repeat;
+  }
+
+  .priceList__list {
+    gap: 13px;
+    margin: 0 0 73px 0
+  }
+  .priceList__card {
+    border-radius: 40px;
+    padding: 16px 32px 32px;
+  }
+  .priceList__h3 {
+    margin-bottom: 20px;
+  }
+  .priceList__h3_fontSize-360 {
+    margin-top: 21px;
+    font-size: 24px;
+  }
+  .priceList__text {
+    margin: 0 0 26px;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: .37px;
+  }
+  .priceList__text .span-360 {
+    white-space: nowrap;/* текст не разделятся */
+  }
+  .priceList__text .span-1796 {
+    white-space: normal;/* текст разделятся */
+  }
+  .priceList__span {
+    margin-top: 1px;
+    font-size: 25.5px;
+    margin-bottom: 11px;
+  }
+  .priceList__link {
+    justify-content: center;
+    padding: 15px 20px 17px 15.7px;
+    font-size: 16px;
+  }
+
+  .priceList__all {
+    margin-bottom: 12px;
+    gap: 14.8px;
+    font-size: 19px;
+  }
+  .priceList__desc {
+    line-height: 24px;
   }
 }

@@ -359,11 +359,11 @@ opacity: .7;
   display: block;
   position: absolute;
   left: 21%;
-  height: 3px;
   width: 63%;
-  background: var(--color-white);
+  height: 3px;
   border: 1px solid transparent;
   border-radius: 8px;
+  background: var(--color-white);
   opacity: 1;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -385,37 +385,37 @@ opacity: .7;
   top: 24px;
 }
 .burger span {
-  background: var(--color-white);
   /*left: auto; Зеркалить поворот*/
   right: 0;
+  background: var(--color-white);
   transition: all .4s ease-in-out;
 }
 /*Крест*/
 .burger.open span:nth-child(1) {
+  margin-top: -2px;
+  margin-left: -35%;
+  top: 50%;
+  left: 50%;
+  width: 70%;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
-  top: 50%;
-  left: 50%;
-  width: 70%;
-  margin-top: -2px;
-  margin-left: -35%;
 }
 .burger.open span:nth-child(2) {
   width: 0%;
   opacity: 0;
 }
 .burger.open span:nth-child(3) {
+  top: 50%;
+  left: 50%;
+  margin-top: -2px;
+  margin-left: -35%;
+  width: 70%;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  top: 50%;
-  left: 50%;
-  width: 70%;
-  margin-top: -2px;
-  margin-left: -35%;
 }
 
 /* В шапке соц.сети */
@@ -532,10 +532,10 @@ opacity: .7;
   display: flex;
   align-items: center;
   padding: 0;
-  outline: none;
   border: 1px solid transparent;  
   width: 75px; /* чтобы кнопка не прыгала при изменении иконки */
   background-color: transparent;
+  outline: none;
   cursor: pointer; 
   -webkit-transition: color .4s ease-in-out;
   -moz-transition: color .4s ease-in-out;
@@ -760,11 +760,11 @@ opacity: .7;
   top: 55px;
   right: 64px;
   max-width: 44.66%;
+  width: 100%;
+  min-height: 437px;
   background: center / cover no-repeat;
   /*background-image: url("../img/citizen.png"); В page-home.php*/
-  /*min-height: 437px;
-  width: 100%;
-  z-index: -1;
+  /*z-index: -1;
 }*/
 .hero__image-ACF {
     position: absolute;
@@ -835,8 +835,8 @@ opacity: .7;
 .services__card {
   display: flex;
   flex-direction: column; /* всё в столбик */
-  border-radius: 40px;
   padding: 3px 38px 19px;
+  border-radius: 40px;
   height: 100%; /* растягиваем карточку на всю высоту */
   background: var(--color-botticelli);
 }
@@ -905,9 +905,9 @@ opacity: .7;
 /*** footer-1796 ***/
 .footer {
   padding: 30px 0;
-  background: var(--color-botticelli);
   text-align: center;
   font-size: 14px;
+  background: var(--color-botticelli);
   color: var(--color-riverBed);
 }
 /*** // footer-1796 // ***/
@@ -1078,8 +1078,8 @@ opacity: .7;
   }
   .header__dropdown {
     top: 28px;
-    left: auto;
     right: 0;
+    left: auto;
     padding: 16px 0;
     width: 100%;
     max-width: 444px; /* чтобы на больших мобилках не расползался */
@@ -1100,8 +1100,8 @@ opacity: .7;
   /* -- В wordpress заменил классы на свои -- */
   .sub-menu {/*.header__dropdown*/
     top: 28px;
-    left: auto;
     right: 0;
+    left: auto;
     padding: 16px 0;
     width: 100%;
     max-width: 444px;
@@ -1123,8 +1123,8 @@ opacity: .7;
     display: block;
   }
   .hero__h2 {
-    line-height: 40px;
     margin-bottom: 19px;
+    line-height: 40px;
   }
   .hero__h2 span {
     white-space: normal;
@@ -1173,8 +1173,8 @@ opacity: .7;
   }
   .services__link-transparent666 {
     gap: 15px;
-    margin-left: -6.9px;
     margin-bottom: 3px;
+    margin-left: -6.9px;
     padding: 16px 0 0px;
     width: max-content;
     font-size: 17px;
