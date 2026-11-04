@@ -72,6 +72,7 @@
 
 :root {
   --color-white: #fff;
+  --color-white12: rgba(255, 255, 255, 0.12); /*#fff(12%)*/
   --color-black: #000;
   --color-funBlue: #1a4fb0;
   --color-monza: #cc0a0a;
@@ -84,8 +85,10 @@
   --color-shark: #1a1b1d;
   --color-stTropaz: #265F91;
   --color-solitude: #e3f1ff;
-  --color-shark1D: #1a1b1d;
   --color-funBlue: #1a4fb0;
+  --color-gradient-start: #5271b1;
+  --color-gradient-end: #6c99d9;
+  --color-catskillWhite: #eaf1f6;
 }
 
 html {
@@ -434,6 +437,26 @@ opacity: .7;
   opacity: .3;
 }
 /* // В шапке соц.сети */
+
+.link-arrow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 18.5px;
+  color: var(--color-funBlue);
+}
+.link-arrow:focus {
+  color: var(--color-black);
+}
+.link-arrow svg path {
+  stroke: var(--color-funBlue);
+}
+.link-arrow:focus svg path {
+  stroke: var(--color-black);
+}
+.link-arrow:hover svg path {
+  stroke: var(--color-monza);
+}
 
 
 /***Шапка header-1796px***/
@@ -915,7 +938,7 @@ opacity: .7;
   border-radius: 40px;
   padding: 7px 29px 30px 31px;
   height: 100%;
-  color: var(--color-shark1D);
+  color: var(--color-shark);
   background: var(--color-botticelli);
 }
 .options__h3 {
@@ -992,16 +1015,16 @@ opacity: .7;
 
 /*** priceList-1796 ***/
 .priceList {
-  padding: 0 0 40px;
+  padding: 0 0 163px;
 }
 .priceList__container {
   padding: 0 76px 0 82px;
 }
 .priceList__list {
   display: grid;
-  grid-template-columns: 31.5% 31.5% 31.5%;
+  grid-template-columns: repeat(3, 31.5%);
   gap: 41px;
-  margin: 0 0 25px 0;
+  margin: 0 0 27px 0;
 }
 .priceList__card {
   display: flex;
@@ -1009,7 +1032,7 @@ opacity: .7;
   border-radius: 20px;
   padding: 21px 40px 43px;
   height: 100%;
-  color: var(--color-shark1D);
+  color: var(--color-shark);
   background: var(--color-botticelli);
 }
 .priceList__h3 {
@@ -1054,34 +1077,159 @@ opacity: .7;
 .priceList__flex {
   display: flex;
   align-items: center;
-  gap: 16px;
 }
 .priceList__all {
-  display: flex;
-  align-items: center;
-  gap: 14px;
   min-width: 141px;
-  font-size: 18.5px;
-  color: var(--color-funBlue);
-}
-.priceList__all:focus {
-  color: var(--color-black);
-}
-.priceList__all svg path {
-  stroke: var(--color-funBlue);
-}
-.priceList__all:focus svg path {
-  stroke: var(--color-black);
-}
-.priceList__all:hover svg path {
-  stroke: var(--color-monza);
 }
 .priceList__desc {
-  margin: 0;
+  margin: 3px 0 0;
   font-size: 18.65px;
   line-height: 20px;
 }
 /*** // priceList-1796 // ***/
+
+/*** agreement-1796 ***/
+.agreement {
+  padding: 39px 0 72px;
+  background-image: linear-gradient(to right, var(--color-gradient-start) 0%, var(--color-funBlue) 55%, var(--color-gradient-end) 100%);
+}
+.agreement__container {
+  padding: 0 84px;
+  color: var(--color-white);
+}
+.agreement__h2 {
+  margin-bottom: 15px;
+  font-size: 34px;
+  font-weight: 700;
+}
+.agreement__desc {
+  margin: 0 0 26.5px;
+  font-size: 18.6px;
+  line-height: 26px;
+}
+.agreement__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin: 0 0 49px 0;
+}
+.agreement__card {
+  border-radius: 18px;
+  padding: 24px 20px 8px;
+  height: 100%;
+  color: var(--color-shark);
+  background: var(--color-white);
+}
+.agreement__number {
+  display: flex; /* Включаем флекс-режим */
+  justify-content: center; /* Центрируем цифру по горизонтали */
+  align-items: center; /* Центрируем цифру по вертикали */
+  margin-bottom: 13px;
+  border-radius: 17px;
+  width: 34px;
+  height: 40px;
+  font-size: 18px;
+  background-color: var(--color-funBlue);
+  color: var(--color-white);
+}
+.agreement__h3 {
+  margin: 0 0 13px;
+  font-size: 22px;
+  line-height: 32px;
+}
+.agreement__text {
+  margin-top: 0;
+  font-size: 20.5px;
+  line-height: 28px;
+}
+.agreement__payment {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin: 0 auto;
+  padding: 9px 58px 21px 9px;
+  border-radius: 14px;
+  width: 70%;
+  background-color: var(--color-white12);
+}
+.agreement__payment-icon {
+  width: 60px;
+  height: 60px;
+}
+.agreement__payment-text {
+  margin-top: 10px;
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: 2%;
+}
+/*** // agreement-1796 // ***/
+
+/*** trust-1796 // ***/
+.trust {
+  position: relative;
+  padding: 80px 0;
+}
+.trust::after {
+  content: "";
+  position: absolute;
+  top: 53px;
+  right: 180px;
+  max-width: 38.25%;
+  width: 100%;
+  min-height: 276px;
+  background: center / cover no-repeat;
+  background-image: url("../img/trust.png");
+  z-index: -1;
+}
+.trust__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.trust__content {
+  padding-left: 5px;
+  flex-basis: 525px;
+}
+.trust__h2 {
+  margin-bottom: 24px;
+  font-weight: 700;
+  letter-spacing: 2%;
+}
+.trust__desc {
+}
+.trust__list {
+}
+.trust__item {
+}
+.trust__card {
+}
+.trust__h3 {
+}
+.trust__h3_blue {
+}
+.trust__text {
+}
+.trust__all {
+}
+.trust__block-link {
+  display: flex;
+  flex-direction: column;
+}
+.trust__link {
+  position: relative;
+  border-bottom: 1px solid var(--color-catskillWhite);
+}
+.trust__link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  min-height: 40px;
+  background: center / cover no-repeat;
+  background-image: url("../img/arrowButton.svg");
+}
+/*** // trust-1796 // ***/
 
 /*** footer-1796 ***/
 .footer {
@@ -1194,6 +1342,10 @@ opacity: .7;
     width: 100%;
     max-width: 100%;
   }
+  
+  .agreement__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 1111px) {
@@ -1215,8 +1367,8 @@ opacity: .7;
     padding: 18px 0;
   }
   .options__h2 {
-    margin-bottom: 21px;
-    font-size: 40px;
+    margin-bottom: 24px;
+    font-size: 39px;
   }
   .options__desc {
     line-height: 1.2;
@@ -1240,6 +1392,9 @@ opacity: .7;
     flex: 1 1 calc(100% - 20px);
   }
 
+  .agreement__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 888px) {
@@ -1506,7 +1661,7 @@ opacity: .7;
     margin: 0 0 48px;
   }
   .options__list {
-    gap: 16px;
+    gap: 17.5px;
   }
   .options__card {
     padding: 8px 32px 31px;
@@ -1520,7 +1675,7 @@ opacity: .7;
     display: none;
   }
   .options__text {
-    margin: 0 0 25px;
+    margin: 0 0 24px;
     font-size: 18px;
   }
   .options__text span.nowrap-1796 {
@@ -1531,11 +1686,11 @@ opacity: .7;
   }
   .options__link {
     justify-content: center;
-    padding: 14px 17px 17px 20px;
-    font-size: 16.9px;
+    padding: 15px 17px 16px 10px;
+    font-size: 16.5px;
   }
   .options__link svg {
-    margin-left: 10px;
+    margin-left: 14px;
   }
 
   .priceInfo {
@@ -1552,10 +1707,75 @@ opacity: .7;
     margin-top: 26px;
     font-size: 39px;
     line-height: 1.03;
+  } 
+  
+  .agreement {
+    padding: 28px 0 49px;
+  }
+  .agreement__container {
+    padding: 0 9px 0 16px;
+  }
+  .agreement__h2 {
+    margin-bottom: 12px;
+    font-size: 28px;
+  }
+  .agreement__desc {
+    margin: 0 0 28px;
+    font-size: 18px;
   }  
+  .agreement__list {
+    display: block;
+    margin: 0 3px 58px 0;
+  }
+  .agreement__item:not(:last-child) {/*кроме последнего*/
+    margin-bottom: 16px;  
+  }
+  .agreement__card {
+    padding: 23px 8px 7px 19px;
+  }
+  .agreement__number {
+    margin-bottom: 14px;
+    height: 34px;
+    font-size: 13px;
+  }
+  .agreement__h3 {
+    margin: 0 0 8px;
+    font-size: 17px;
+    line-height: 22px;
+  }
+  .agreement__text {
+    font-size: 16px;
+    line-height: 21px;
+  }
+  .agreement__payment {
+    align-items: start;
+    gap: 2px;
+    padding: 11px 28px 17px 9px;
+    width: 100%;
+  }
+  .agreement__payment-text {
+    margin-top: 9px;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0;
+  }
+  .agreement__payment-text span {
+    font-weight: 700;
+  }
+
+
+
+
+
+
 }
 
 @media (max-width: 400px) {
+  .link-arrow {
+    gap: 14.8px;
+    font-size: 19px;
+  }
+
   .services__offices {
     padding: 17px 20px 7px 20px;
     text-align: start;
@@ -1589,21 +1809,27 @@ opacity: .7;
     min-height: 171px;
     background: url("../img/pic-mobile.png") center / cover no-repeat;
   }
+  .priceInfo__desc {
+    margin-bottom: 21px;
+  }
 
+  .priceList {
+    padding: 0 0 18px;
+  }
   .priceList__list {
-    gap: 13px;
-    margin: 0 0 73px 0
+    gap: 16px;
+    margin: 0 0 74px 0
   }
   .priceList__card {
     border-radius: 40px;
-    padding: 16px 32px 32px;
+    padding: 12px 32px 32px;
   }
   .priceList__h3 {
-    margin-bottom: 20px;
+    margin-bottom: 19px;
+    font-size: 24px;
   }
   .priceList__h3_fontSize-360 {
-    margin-top: 21px;
-    font-size: 24px;
+    margin-top: 25px;
   }
   .priceList__text {
     margin: 0 0 26px;
@@ -1617,23 +1843,24 @@ opacity: .7;
   .priceList__text .span-1796 {
     white-space: normal;/* текст разделятся */
   }
+  .priceList__space-between {
+    gap: 26px;
+  }
   .priceList__span {
     margin-top: 1px;
     font-size: 25.5px;
-    margin-bottom: 11px;
   }
   .priceList__link {
     justify-content: center;
     padding: 15px 20px 17px 15.7px;
     font-size: 16px;
   }
-
-  .priceList__all {
-    margin-bottom: 12px;
-    gap: 14.8px;
-    font-size: 19px;
+  .priceList__flex {
+    gap: 18px;
   }
   .priceList__desc {
     line-height: 24px;
   }
+
+  
 }
