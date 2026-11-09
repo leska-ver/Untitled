@@ -994,10 +994,16 @@ opacity: .7;
   position: relative;
   padding: 38px 0 76px;
 }
-.priceInfo::after {
+.priceInfo__container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.priceInfo__container::after {
   content: "";
   position: absolute;
-  top: 53px;
+  top: 15px;
   right: 180px;
   max-width: 38.25%;
   width: 100%;
@@ -1005,11 +1011,6 @@ opacity: .7;
   background: center / cover no-repeat;
   background-image: url("../img/pic.png");
   z-index: -1;
-}
-.priceInfo__container {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
 }
 .priceInfo__content {
   padding-left: 5px;  
@@ -1180,10 +1181,15 @@ opacity: .7;
 
 /*** trust-1796 // ***/
 .trust {
-  position: relative;
   padding: 80px 0;
 }
-.trust::after {
+.trust__container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.trust__container::after {
   content: "";
   position: absolute;
   top: 53px;
@@ -1194,11 +1200,6 @@ opacity: .7;
   background: center / cover no-repeat;
   background-image: url("../img/trust.png");
   z-index: -1;
-}
-.trust__container {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
 }
 .trust__content {
   padding-left: 5px;
@@ -1279,7 +1280,7 @@ opacity: .7;
     white-space: normal;
   }
 
-  .priceInfo::after {
+  .priceInfo__container::after {
     right: 50px;
     background-size: contain;
   }
@@ -1338,7 +1339,7 @@ opacity: .7;
     grid-template-columns: 33% 33% 33%;
   }
 
-  .priceInfo::after {
+  .priceInfo__container::after {
     right: -45px;
     max-width: 750px;
     background-size: contain;
@@ -1437,7 +1438,7 @@ opacity: .7;
     max-width: 550px;
   }
 
-  .priceInfo::after {
+  .priceInfo__container::after {
     right: 0;
     max-width: 550px;
   }
@@ -1715,14 +1716,26 @@ opacity: .7;
   }
 
   .priceInfo {
-    margin-top: -25px;
-    padding-top: 50%;
+    position: relative;
+    padding-top: 60%;
   }
   .priceInfo::after {
+    content: "";
+    position: absolute;
     top: 0;
+    right: 0;
+    max-width: 550px;
+    width: 100%;
+    min-height: 276px;
+    background: center / cover no-repeat;
+    background-image: url("../img/pic.png");
+    z-index: -1;
   }
   .priceInfo__container {
     padding: 0 11px;
+  }
+  .priceInfo__container::after {
+    display: none;
   }
   .priceInfo__h2 {
     margin-top: 26px;
@@ -1823,7 +1836,8 @@ opacity: .7;
   }
 
   .priceInfo {
-    padding: 171px 0 0;
+    top: -25px;
+    padding: 171px 0 0;    
   }
   .priceInfo::after {
     max-width: 100%;
@@ -1835,6 +1849,7 @@ opacity: .7;
   }
 
   .priceList {
+    margin-top: -25px;
     padding: 0 0 18px;
   }
   .priceList__list {
