@@ -8,6 +8,9 @@
   - https://cc50985-wordpress-mpooh.tw1.ru/  
   - https://cc50985-wordpress-mpooh.tw1.ru/danila/
 
+* **Зал wordpress в нём стул для Данилы сайта**
+  - https://danila-untitled.cc50985-wordpress-mpooh.tw1.ru/
+
 * **Для админства:**
 - https://cc50985-wordpress-mpooh.tw1.ru/danila/wp-admin
 
